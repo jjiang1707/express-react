@@ -9,8 +9,8 @@ app.use(helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
       styleSrc: ["'self'", 'https://fonts.googleapis.com'],
-      connectSrc: ["'self'", 'https://cors-anywhere.herokuapp.com'],
-      imgSrc: ["'self'", 'https://*.yelpcdn.com']
+      connectSrc: ["'self'", 'https://cors-anywhere.herokuapp.com'], // only allow app to connect to the set domains. Request temp access here: https://cors-anywhere.herokuapp.com/corsdemo
+      imgSrc: ["'self'", 'https://*.yelpcdn.com'] // only allow app to load images from set domains
       
     }
    }));

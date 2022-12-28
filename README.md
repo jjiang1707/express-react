@@ -1,0 +1,1 @@
+Note: The CSP here is to prevent the loading of malicious scripts that may be injected by developers. For example if they decided to connect to a malicious API or inserted script tags that allow them to download malicious scirpts. Segregation of duties is required between the configuration of CSP on server side and the development of the application code.
