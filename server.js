@@ -20,6 +20,11 @@ app.use(cors({
     origin: 'http://localhost:3000'
 })); 
 
+app.use(function(req, res, next) {
+  res.setHeader("X-XSS-Protection", "1; mode=block");
+  next();
+ });
+
 
 app.use(express.static(path.join(__dirname, 'build')));
 
