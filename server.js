@@ -10,10 +10,11 @@ app.use(helmet.contentSecurityPolicy({
       defaultSrc: ["'self'"],
       styleSrc: ["'self'", 'https://fonts.googleapis.com'],
       connectSrc: ["'self'", 'https://cors-anywhere.herokuapp.com'], // only allow app to connect to the set domains. Request temp access here: https://cors-anywhere.herokuapp.com/corsdemo
-      imgSrc: ["'self'", 'https://*.yelpcdn.com'] // only allow app to load images from set domains
-      
+      imgSrc: ["'self'", 'https://*.yelpcdn.com'], // only allow app to load images from set domains
+      frameSrc: ["'self'" ] // only allow the loading of iframes from self origin. Prevents someone embedding another html document in app code if their are vulnerabilities
     }
    }));
+
 
 app.use(cors({
     origin: 'http://localhost:3000'
